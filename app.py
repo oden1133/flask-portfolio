@@ -9,6 +9,5 @@ def home():
     <p>こんにちは！農学部で統計を学んでいる大学生です。</p>
     <p>PythonとFlaskを使って、自分の紹介ページを作っています！</p>
     """
-
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=10000, debug=True)
