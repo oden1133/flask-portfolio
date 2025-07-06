@@ -1,5 +1,5 @@
 from flask import Flask, render_template
-import os  # ← 追加
+import os
 
 app = Flask(__name__)
 
@@ -7,7 +7,7 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
-# 🔽 ここが超重要！！
+# Render用にホスト＆ポート設定
 if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 10000))  # Renderが自動で指定するポートを取得
-    app.run(host='0.0.0.0', port=port)  # ここで公開サーバとして起動
+    port = int(os.environ.get('PORT', 10000))
+    app.run(host='0.0.0.0', port=port)
